@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~font-awesome/css/font-awesome.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  background-color: rgb(20, 20, 20);
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  min-width: 260px;
+}
+body::-webkit-scrollbar {
+  display:none;
+}
+
+a {
+
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
