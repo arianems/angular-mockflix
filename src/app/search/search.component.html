@@ -1,0 +1,20 @@
+<div class="container-fluid mt-5 pl-4">
+  <form>
+    <div class="container-fluid searchbar-container">
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            class="form-control searchbar-input"
+            name="input"
+            id=""
+            placeholder="What do you want to watch today?"
+            aria-describedby="search bar"
+            (input)="onChange($event)"
+          />
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid justify-content-center" *ngIf="searchresult">
+  <app-media-grid [linkpath]="linkpath" (mediatype)="getMediaType($event)" [mediaresults]="searchresult"></app-media-grid>
+</div>

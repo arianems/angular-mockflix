@@ -1,0 +1,17 @@
+<div class="row">
+  <p
+    *ngIf="rowtitle && mediaresults.length > 0"
+    class="row-title text-white my-3"
+  >
+    {{ rowtitle }}
+  </p>
+  <div class="row-poster">
+      <img
+        src="https://www.themoviedb.org/t/p/original{{ media.poster_path }}"
+        alt="trending movies"
+        class="row-img large-img"
+        *ngFor="let media of mediaresults"
+        routerLink="/{{ media.media_type }}/{{ media.id }}"
+      />
+  </div>
+</div>

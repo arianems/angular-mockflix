@@ -1,0 +1,30 @@
+<div class="outer-container" *ngIf="hasLoaded">
+  <div class="grid-title">
+    <h2 class="component-title" *ngIf="gridtitle">{{ gridtitle }}</h2>
+  </div>
+  <div class="row-container row row-cols-sm-6">
+    <div *ngFor="let media of mediaresults" class="media-col-outer">
+      <div class="media-col-inner">
+        <img
+          (load)="checkLoadingState()"
+          class="media-poster w-100"
+          src="https://www.themoviedb.org/t/p/original{{ media.poster_path }}"
+          alt="{{ media.original_title || media.original_name }}'s poster"
+        />
+        <div
+          class="container media-button-container justify-content-center align-items-center"
+        >
+          <a
+            routerLink="/{{media.media_type}}/{{ media.id }}"
+            (click)="getSelectedMedia(media)"
+            ><i class="fa fa-plus-circle"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="media-title">
+        <p>{{ media.original_title || media.original_name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div id="mainCarousel" class="carousel slide">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#mainCarousel"
+      [attr.data-bs-slide-to]="i"
+      [ngClass]="i === 0 ? 'active' : ''"
+      aria-current="true"
+      *ngFor="let media of mediaresults; let i = index"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div
+      class="carousel-item"
+      *ngFor="let media of mediaresults; let i = index"
+      [ngClass]="i === 0 ? 'active' : ''"
+    >
+      <img
+        src="https://www.themoviedb.org/t/p/original{{ media.backdrop_path }}"
+        class="d-block w-100"
+        alt="{{ media.original_title }}'s promo photo"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <a routerLink="/{{media.media_type}}/{{media.id}}"><h5>{{ media.title || media.original_title }}</h5></a>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#mainCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#mainCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- improve layout of caption container -->

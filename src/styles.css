@@ -2,9 +2,17 @@
 
 @import "~font-awesome/css/font-awesome.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;800&display=swap');
+
+
+:root {
+  --component-title-font-family: 'Anton', sans-serif;
+  --media-title-shadow: 5px 2px 3px rgba(0,0,0,0.56);
+  --button-box-shadow: text-shadow: 5px 2px 3px rgba(0,0,0,0.56);
+}
 
 body {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(8, 8, 8);
   margin: 0;
   border: 0;
   padding: 0;
@@ -13,6 +21,7 @@ body {
   overflow-x: hidden;
   min-width: 260px;
 }
+
 body::-webkit-scrollbar {
   display:none;
 }
@@ -25,3 +34,4 @@ a {
 li {
   list-style-type: none;
 }
+

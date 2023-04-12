@@ -1,0 +1,59 @@
+.outer-container {
+  width: 100%;
+}
+
+.grid-title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.media-col-inner {
+  position: relative;
+}
+
+.media-button-container {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.media-button-container > a > i {
+  font-size: 50px;
+  color: white;
+  text-shadow: 4px 4px 5px rgba(0,0,0,0.82)
+
+}
+
+.media-title {
+  color: white;
+  margin-top: 10px;
+}
+
+.media-col-outer {
+  transition: transform 0.5s;
+}
+
+
+.media-col-outer:hover {
+  transform: scale(1.06);
+
+}
+
+@media screen and (max-width: 575px) {
+  .media-button-container > a > i {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 660px) {
+  .media-button-container > a > i {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 660px) and (max-width: 760px) {
+    .media-button-container > a > i {
+      font-size: 45px;
+    }
+  }
+
+}

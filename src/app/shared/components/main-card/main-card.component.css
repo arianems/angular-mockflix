@@ -1,0 +1,13 @@
+.carousel-caption {
+  height: 18%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.carousel-caption > a > h5 {
+  font-weight: 400;
+  line-height: 0.8;
+  font-family: 'Anton', serif;
+  color: white;
+}

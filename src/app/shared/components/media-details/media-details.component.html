@@ -1,0 +1,26 @@
+<div class="media-main__container container-fluid">
+  <div class="media-main__poster">
+    <img
+      class="media-poster"
+      src="https://www.themoviedb.org/t/p/original{{ media.backdrop_path }}"
+      alt=""
+    />
+  </div>
+  <div class="media-main__inner">
+    <p class="media-main__title">{{ media.original_title }}</p>
+    <button class="btn btn-light btn-md play-button">
+      <i class="fa fa-play"></i>&nbsp; Watch Now
+    </button>
+  </div>
+</div>
+
+<div class="media-info__container container-fluid my-4">
+  <div class="media-info__details__container">
+    <p class="media-overview">{{ media.overview }}</p>
+  </div>
+  <div class="media-info__actions__container">
+    <button class="btn btn-light info-btn btn-light">Add to My List</button>
+    <button *ngIf="media.video" class="trailer-button btn info-btn btn-light">Trailer</button>
+    <button *ngIf="media.media_type === 'tv'" class="seasons-button btn btn-light info-btn">Dropdown for Seasons</button>
+  </div>
+</div>
